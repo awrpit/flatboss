@@ -23,7 +23,7 @@ function FindFlatmateResults() {
       }
     }
     getData()
-  }, [])
+  }, [location.state.location, location.state.age, location.state.name])
 
   return (
     <>
@@ -52,16 +52,16 @@ function FindFlatmateResults() {
               return (
                 <Alert variant="primary">
                   {" "}
-                  {result.fields.Name} available on twitter at{" "}
-                  {result.fields.Twitter}
+                  {result.fields.Name} available on twitter at @
+                  {result.fields.TwitterID}
                 </Alert>
               )
             } else {
               return (
                 <Alert variant="light">
                   {" "}
-                  {result.fields.Name} available on twitter at{" "}
-                  {result.fields.Twitter}
+                  {result.fields.Name} available on twitter at @
+                  {result.fields.TwitterID}
                 </Alert>
               )
             }

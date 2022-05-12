@@ -24,7 +24,7 @@ function FlatResults() {
       }
     }
     getData()
-  }, [])
+  }, [location.state.location, location.state.age])
   return (
     <>
       {console.log(data)}
