@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./components/Home"
+import { Routes, Route } from "react-router-dom"
+import PostFlat from "./components/PostFlat"
+import FindFlat from "./components/FindFlat"
+import FindFlatmates from "./components/FindFlatmates"
+import FlatResults from "./components/FlatResults"
+import FindFlatmateResults from "./components/FindFlatmateResults"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/postflat" element={<PostFlat />} />
+        <Route path="/findflat" element={<FindFlat />} />
+        <Route path="/findflatmate" element={<FindFlatmates />} />
+        <Route path="/ffresults" element={<FindFlatmateResults />} />
+        <Route path="/flatresults" element={<FlatResults />} />
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
