@@ -34,7 +34,7 @@ function PostFlat() {
           },
         ],
       })
-      console.log(data)
+
       const res = await axios.post(
         "https://api.airtable.com/v0/appw0tKoQNz4UImBM/New%20Flats",
         data,
@@ -45,6 +45,7 @@ function PostFlat() {
           },
         }
       )
+      console.log(res)
       setSuccess(true)
     } catch (error) {
       console.log(error)
